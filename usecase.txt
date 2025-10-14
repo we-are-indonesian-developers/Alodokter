@@ -1,0 +1,55 @@
+@startuml
+left to right direction
+actor Admin
+actor Doctor
+actor Patient
+
+rectangle "Hospital Management System" {
+  Admin -- (Create Doctor)
+  Admin -- (Edit Doctor)
+  Admin -- (Delete Doctor)
+  Admin -- (Create Patient)
+  Admin -- (Edit Patient)
+  Admin -- (Delete Patient)
+  Admin -- (Manage Logo & Favicon)
+  Admin -- (Manage Home Page Data)
+  Admin -- (Manage Medicines)
+  Admin -- (Manage Terms & Privacy Pages)
+  Admin -- (Manage Departments)
+  Admin -- (View Doctor Schedules)
+  Admin -- (View Patient Appointments)
+  Admin -- (View Subscribers)
+  Admin -- (Delete Subscribers)
+  Admin -- (Export Subscribers as CSV)
+  Admin -- (Update Own Profile)
+  Admin -- (View Dashboard: Commission & Earnings)
+  Admin -- (Approve/Cancel Withdraw Requests)
+
+  Doctor -- (Login)
+  Doctor -- (Reset Profile Info)
+  Doctor -- (Reset Password)
+  Doctor -- (Change Photo & Signature)
+  Doctor -- (Set Time Schedules & Capacity)
+  Doctor -- (Conduct Consultation)
+  Doctor -- (Select Medicines)
+  Doctor -- (View Earnings & Balance)
+  Doctor -- (Submit Withdraw Request)
+
+  Patient -- (Create Account)
+  Patient -- (Reset Password)
+  Patient -- (Update Photo & Profile Info)
+  Patient -- (Pay & Book Appointment)
+  Patient -- (View Prescription)
+  Patient -- (Download/Print Prescription)
+}
+
+note right of Admin
+  Admin creates Doctor accounts.
+  Doctors cannot register themselves.
+end note
+
+note left of Patient
+  Patient self-registers
+  for free.
+end note
+@enduml
