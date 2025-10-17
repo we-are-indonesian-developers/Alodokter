@@ -14,4 +14,5 @@ try {
     echo "Connection Success Bro...";
 }
 
+define("BASE_URL","http://localhost/alodokter/")
 ?>
